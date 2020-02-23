@@ -48,4 +48,4 @@ app.use(session({secret: "sekret"}));
 //test
     app.get("*", (req, res) => res.send("brak wskazanego adresu"))
 
-    app.listen(port, () => console.log(`Example app listening on port ${port}!`))git commit -m "first commit"
+    app.listen(port, () => console.log(`Example app listening on port ${port}!`))
