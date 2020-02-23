@@ -7,8 +7,12 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
+
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import CreateArticle from "./Components/create-article-component";
+import ArticleList from "./Components/article-list-component"
+import EditArticle from "./Components/edit-article-component"
+
 
 function App() {
 
@@ -32,6 +36,15 @@ function App() {
                                 </Nav>
                             </Nav>
 
+                            <Nav className="justify-content-end">
+                                <Nav>
+                                    <Link to={"/article-list"} className="nav-link">
+                                        Article List
+                                    </Link>
+                                </Nav>
+                            </Nav>
+
+
                         </Container>
                     </Navbar>
                 </header>
@@ -43,6 +56,9 @@ function App() {
                                 <Switch>
                                     <Route exact path="/" component={CreateArticle}/>
                                     <Route path="/create-article" component={CreateArticle}/>
+                                    <Route path="/edit-article/:id" component={EditArticle}/>
+                                    <Route path="/article-list" component={ArticleList}/>
+
                                 </Switch>
                             </div>
                         </Col>
@@ -58,4 +74,3 @@ function App() {
 }
 
 export default App;
-
