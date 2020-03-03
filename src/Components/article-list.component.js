@@ -1,20 +1,19 @@
-import React, {Component} from 'react';
-import axios from "axios";
-import Table from "react-bootstrap/Table";
-import ArticleTableRow from "./articleTableRow";
-
+import React, {Component} from "react"
+import axios from 'axios'
+import Table from 'react-bootstrap/Table'
+import ArticleTableRow from './articleTableRow'
 
 export default class ArticleList extends Component {
+
     constructor(props) {
         super(props);
-
         this.state = {
             articles: []
         }
     }
 
     componentDidMount() {
-        axios.get("http://localhost:4000/articles/")
+        axios.get('http://localhost:4000/articles/')
             .then(res => {
                 this.setState({
                     articles: res.data
@@ -27,7 +26,7 @@ export default class ArticleList extends Component {
 
     dataTable() {
         return this.state.articles.map((res, i) => {
-            return <ArticleTableRow obj={res} key={i}/>
+            return <ArticleTableRow obj={res} key={i}/>;
         });
     }
 
@@ -43,11 +42,11 @@ export default class ArticleList extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {this.dataTable()}
+                        {this.dataTable()}
                     </tbody>
                 </Table>
             </div>
         )
     }
-}
 
+}

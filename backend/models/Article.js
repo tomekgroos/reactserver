@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const schema = mongoose.Schema;
 
-let articleSchema = new Schema({
+let articleSchema = new schema({
         title: {
             type: String
         },
@@ -10,12 +10,10 @@ let articleSchema = new Schema({
         },
         content: {
             type: String
-        },
-    },
-    {
-        collection: "articles"
-
+        }
+    }, {
+        collection: 'articles'
     }
-);
+)
 
-module.exports = mongoose.model("Article", articleSchema)
+module.exports = mongoose.model('Article', articleSchema)

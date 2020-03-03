@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-import CreateArticle from "./Components/article-list.component";
+import CreateArticle from "./Components/create-article.component";
 import EditArticle from "./Components/edit-article.component";
 import ArticleList from "./Components/article-list.component";
 
